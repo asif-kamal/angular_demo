@@ -21,7 +21,7 @@ export class UserComponent {
   avatar = input.required<string>(); //signal
   name = input.required<string>(); //signal
 
-  @Output() select = new EventEmitter();
+  @Output() select = new EventEmitter<string>();
 
   imagePath = computed(() => 'assets/users/' + this.avatar());
   // get imagePath() {
