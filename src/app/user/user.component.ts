@@ -27,6 +27,7 @@ export class UserComponent {
   //   name: string;
   // };
   @Input({ required: true }) userObject!: User;
+  @Input({ required: true }) selected!: boolean;
   @Output()
   select = new EventEmitter<string>();
 
