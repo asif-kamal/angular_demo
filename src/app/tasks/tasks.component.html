@@ -5,7 +5,7 @@
   </header>
 
   <ul>
-    @for(task of dummyTasks; track task.id) {
+    @for(task of selectedUserTasks; track task.id) {
     <li>
       <app-task />
     </li>
