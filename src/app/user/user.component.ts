@@ -3,9 +3,10 @@ import {
   computed,
   EventEmitter,
   Input,
-  input,
   Output,
 } from '@angular/core';
+
+import { User } from './user.model';
 
 @Component({
   selector: 'app-user',
@@ -20,11 +21,12 @@ export class UserComponent {
   // @Input({ required: true }) name!: string;   //decorater
   // avatar = input.required<string>(); //signal
   // name = input.required<string>(); //signal
-  @Input({ required: true }) userObject!: {
-    id: string;
-    avatar: string;
-    name: string;
-  };
+  // @Input({ required: true }) userObject!: {
+  //   id: string;
+  //   avatar: string;
+  //   name: string;
+  // };
+  @Input({ required: true }) userObject!: User;
   @Output()
   select = new EventEmitter<string>();
 
